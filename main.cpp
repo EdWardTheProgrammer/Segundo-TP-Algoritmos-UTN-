@@ -46,15 +46,15 @@ int main() {
 
         switch (opcion) {
             case 1:
-                cout << "\n>>> Carga y Procesamiento de Datos <<<\n";
+                cout << "\nCarga y Procesamiento de Datos\n";
                 cargarYProcesarDatos(vectorCategorias);
                 break;
             case 2:
-                cout << "\n>>> Reporte de Resultados Estadisticos <<<\n";
+                cout << "\nReporte de Resultados Estadisticos\n";
                 mostrarResultados(vectorCategorias);
                 break;
             case 3:
-                cout << "\nSaliendo del sistema... Liberando recursos...\n";
+                cout << "\nSaliendo del sistema y liberando recursos.\n";
                 liberarMemoria(vectorCategorias);
                 break;
             default:
@@ -93,7 +93,7 @@ void generarArchivoPrueba() {
     fwrite(listaPrueba, sizeof(Componente), cantidad, arch);
 
     fclose(arch);
-    cout << "[SISTEMA] Archivo 'COMPONENTES.DAT' preparado con exito.\n";
+    cout << "SISTEMA: el archivo 'COMPONENTES.DAT' esta preparado con exito.\n";
 }
 
 int desplegarMenu() {
@@ -119,7 +119,7 @@ void liberarMemoria(NodoComponente* vectorCategorias[]) {
         }
         vectorCategorias[i] = NULL; 
     }
-    cout << "[SISTEMA] Memoria liberada correctamente.\n";
+    cout << "SISTEMA: Memoria liberada correctamente.\n";
 }
 
 void cargarYProcesarDatos(NodoComponente* vectorCategorias[]) {
